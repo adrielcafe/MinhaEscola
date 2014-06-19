@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Horário Escolar</string>
+    <string name="app_name">Minha Escola</string>
+    <string name="splashscreen_title">Minha\nEscola</string>
+    <string name="schedule">Horários</string>
+    <string name="transcript">Histórico</string>
     <string name="refresh">Atualizar</string>
     <string name="settings">Configurações</string>
     <string name="settings_hint">URL do Aluno</string>

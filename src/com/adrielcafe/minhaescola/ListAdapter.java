@@ -1,4 +1,4 @@
-package com.adrielcafe.horarioescolar.list;
+package com.adrielcafe.minhaescola;
 
 import java.util.List;
 
@@ -8,9 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import com.adrielcafe.minhaescola.model.ListItem;
 import com.hb.views.PinnedSectionListView.PinnedSectionListAdapter;
 
-public class ListAdapter extends ArrayAdapter<Item> implements PinnedSectionListAdapter {
+public class ListAdapter extends ArrayAdapter<ListItem> implements PinnedSectionListAdapter {
 	private LayoutInflater inflater;
 	
 	public enum RowType {
@@ -18,7 +19,7 @@ public class ListAdapter extends ArrayAdapter<Item> implements PinnedSectionList
         LIST_ITEM
     }
 	
-	public ListAdapter(Context context, List<Item> objects) {
+	public ListAdapter(Context context, List<ListItem> objects) {
 		super(context, 0, objects);
 		inflater = LayoutInflater.from(context);
 	}

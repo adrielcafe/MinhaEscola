@@ -1,16 +1,16 @@
-package com.adrielcafe.horarioescolar.list;
+package com.adrielcafe.minhaescola.model;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.adrielcafe.horarioescolar.R;
-import com.adrielcafe.horarioescolar.list.ListAdapter.RowType;
+import com.adrielcafe.minhaescola.ListAdapter.RowType;
+import com.adrielcafe.minhaescola.R;
 
-public class Header implements Item {
+public class ListItemHeader implements ListItem {
 	private final String title;
 
-    public Header(String title) {
+    public ListItemHeader(String title) {
         this.title = title;
     }
     

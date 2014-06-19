@@ -1,19 +1,19 @@
-package com.adrielcafe.horarioescolar.list;
+package com.adrielcafe.minhaescola.model;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.adrielcafe.horarioescolar.R;
-import com.adrielcafe.horarioescolar.list.ListAdapter.RowType;
+import com.adrielcafe.minhaescola.ListAdapter.RowType;
+import com.adrielcafe.minhaescola.R;
 
-public class ListItem implements Item {
+public class ListItemTranscript implements ListItem {
 	private final String name;
-	private final String hour;
+	private final String note;
 
-    public ListItem(String name, String hour) {
+    public ListItemTranscript(String name, String note) {
         this.name = name;
-        this.hour = hour;
+        this.note = note;
     }
     
 	@Override
@@ -25,14 +25,14 @@ public class ListItem implements Item {
 	public View getView(LayoutInflater inflater, View convertView) {
 		View view;
         if (convertView == null)
-            view = (View) inflater.inflate(R.layout.list_item, null);
+            view = (View) inflater.inflate(R.layout.list_item_transcript, null);
         else
             view = convertView;
 
         TextView nameView = (TextView) view.findViewById(R.id.name);
-        TextView hourView = (TextView) view.findViewById(R.id.hour);
+        TextView noteView = (TextView) view.findViewById(R.id.note);
         nameView.setText(name);
-        hourView.setText(hour);
+        noteView.setText(note);
 
         return view;
 	}

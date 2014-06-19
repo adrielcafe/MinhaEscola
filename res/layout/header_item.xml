@@ -4,7 +4,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:orientation="vertical"
-	android:background="#D94D43"
+	android:background="@color/orange"
 	android:padding="10dp">
 
 	<TextView
@@ -12,7 +12,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:textStyle="bold"
-	    android:textColor="#F5F5F5"
+	    android:textColor="@color/white"
 		android:textAppearance="?android:attr/textAppearanceLarge" />
 	
 </LinearLayout>

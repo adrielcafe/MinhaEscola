@@ -1,3 +1,3 @@
-Horário Escolar
-===============
+Minha Escola
+============
 Aplicativo Android

@@ -1,4 +1,4 @@
-package com.adrielcafe.horarioescolar;
+package com.adrielcafe.minhaescola;
 
 import com.google.gson.Gson;
 

@@ -1,4 +1,4 @@
-package com.adrielcafe.horarioescolar;
+package com.adrielcafe.minhaescola;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -6,11 +6,10 @@ import java.util.List;
 
 import org.apache.commons.io.IOUtils;
 
+import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -20,30 +19,47 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.adrielcafe.horarioescolar.list.Header;
-import com.adrielcafe.horarioescolar.list.Item;
-import com.adrielcafe.horarioescolar.list.ListAdapter;
-import com.adrielcafe.horarioescolar.list.ListItem;
+import com.adrielcafe.minhaescola.model.ListItem;
+import com.adrielcafe.minhaescola.model.ListItemHeader;
+import com.adrielcafe.minhaescola.model.ListItemSchedule;
+import com.adrielcafe.minhaescola.model.ListItemTranscript;
+import com.adrielcafe.minhaescola.model.UserData;
+import com.hb.views.PinnedSectionListView;
 
-public class MainActivity extends ListActivity {
-	private static final String[] DAYS_WEEK = new String[]{"Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"};
-	
+public class MainActivity extends Activity {
 	private TextView schoolName;
 	private TextView studentName;
+	private PinnedSectionListView schedule;
+	private PinnedSectionListView transcript;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#4A5A6B")));
+		getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
 		getActionBar().setIcon(R.drawable.logo);
-		setTitle(Html.fromHtml("<b>" + getString(R.string.app_name) + "</b>"));
+		setTitle(Html.fromHtml("<b>" + getString(R.string.app_name) + "</b>"));        
 		setContentView(R.layout.activity_main);
 		
+		TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
+		tabHost.setup();
+		TabSpec spec1 = tabHost.newTabSpec("tabSchedule");
+		spec1.setContent(R.id.tabSchedule);
+		spec1.setIndicator(getString(R.string.schedule));
+		tabHost.addTab(spec1);
+		TabSpec spec2 = tabHost.newTabSpec("tabTranscript");
+		spec2.setContent(R.id.tabTranscript);
+		spec2.setIndicator(getString(R.string.transcript));
+		tabHost.addTab(spec2);
+
 		schoolName = (TextView) findViewById(R.id.schoolName);
 		studentName = (TextView) findViewById(R.id.studentName);
+		schedule = (PinnedSectionListView) findViewById(R.id.schedule);
+		transcript = (PinnedSectionListView) findViewById(R.id.transcript);
 		
 		String url = getPreferences(Context.MODE_PRIVATE).getString(Util.PREF_URL, null);
 		updateUserData(url);
@@ -147,40 +163,32 @@ public class MainActivity extends ListActivity {
 	}
 	
 	private void updateList(UserData userData){
-		List<Item> items = new ArrayList<Item>();
+		List<ListItem> itemsSchedule = new ArrayList<ListItem>();
+		List<ListItem> itemsTranscript = new ArrayList<ListItem>();
 		
 		if(userData == null){
-			items.add(new ListItem(getString(R.string.wrong_config), ""));
+			itemsSchedule.add(new ListItemSchedule(getString(R.string.wrong_config), ""));
+			itemsTranscript.add(new ListItemSchedule(getString(R.string.wrong_config), ""));
 		} else {
-			schoolName.setText(userData.schoolName);
-			studentName.setText(userData.studentName);
+			schoolName.setText(userData.nomeEscola);
+			studentName.setText(userData.nomeEstudante);
+
+			for(String day : userData.horarios.keySet()){
+				itemsSchedule.add(new ListItemHeader(day));
+				for(String[] item : userData.horarios.get(day))
+					itemsSchedule.add(new ListItemSchedule(item[0], item[1]));
+			}
 			
-			for(String dayWeek : DAYS_WEEK){
-		        items.add(new Header(dayWeek));
-		        
-				if(dayWeek.equals("Segunda-Feira")){
-			        for(String[] i : userData.monday)
-			            items.add(new ListItem(i[0], i[1]));
-				} else if(dayWeek.equals("Terça-Feira")){
-					for(String[] i : userData.tuesday)
-			            items.add(new ListItem(i[0], i[1]));
-				} else if(dayWeek.equals("Quarta-Feira")){
-					for(String[] i : userData.wednesday)
-			            items.add(new ListItem(i[0], i[1]));
-				} else if(dayWeek.equals("Quinta-Feira")){
-					for(String[] i : userData.thursday)
-			            items.add(new ListItem(i[0], i[1]));
-				} else if(dayWeek.equals("Sexta-Feira")){
-					for(String[] i : userData.friday)
-			            items.add(new ListItem(i[0], i[1]));
-				} else if(dayWeek.equals("Sábado")){
-					for(String[] i : userData.saturday)
-			            items.add(new ListItem(i[0], i[1]));
-				}
+			for(String semester : userData.historico.keySet()){
+				itemsTranscript.add(new ListItemHeader(semester));
+				for(String[] item : userData.historico.get(semester))
+					itemsTranscript.add(new ListItemTranscript(item[0], item[1]));
 			}
 		}
-		
-        ListAdapter adapter = new ListAdapter(this, items);
-        setListAdapter(adapter);
+
+        ListAdapter adapterSchedule = new ListAdapter(this, itemsSchedule);
+        ListAdapter adapterTranscript = new ListAdapter(this, itemsTranscript);
+        schedule.setAdapter(adapterSchedule);
+        transcript.setAdapter(adapterTranscript);
 	}
 }

@@ -5,7 +5,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context="com.adrielcafe.horarioescolar.MainActivity">
+	tools:context="com.adrielcafe.minhaescola.MainActivity">
     
     <LinearLayout
 		android:layout_width="match_parent"
@@ -25,7 +25,7 @@
 	        android:layout_height="match_parent"
 	        android:gravity="center_vertical"
 	        android:textStyle="bold"
-	        android:textColor="#4A5A6B"
+	        android:textColor="@color/blue"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
         
     </LinearLayout>
@@ -48,15 +48,59 @@
 	        android:layout_height="match_parent"
 	        android:gravity="center_vertical"
 	        android:textStyle="bold"
-	        android:textColor="#4A5A6B"
+	        android:textColor="@color/blue"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
-        
-    </LinearLayout>
-        
-	<com.hb.views.PinnedSectionListView
-		android:id="@android:id/list"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:listSelector="@android:color/transparent" />
 
+    </LinearLayout>
+    
+    <TabHost android:id="@+id/tabHost"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" >
+	    
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        
+	        <TabWidget android:id="@android:id/tabs"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content" />
+	        
+	        <FrameLayout android:id="@android:id/tabcontent"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content">
+	            
+	            <LinearLayout
+	                android:id="@+id/tabSchedule"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" >
+	            	
+	                <com.hb.views.PinnedSectionListView
+						android:id="@+id/schedule"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:listSelector="@android:color/transparent" />
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout
+	                android:id="@+id/tabTranscript"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" >
+	                
+	                <com.hb.views.PinnedSectionListView
+						android:id="@+id/transcript"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:listSelector="@android:color/transparent" />
+	                
+	            </LinearLayout>
+	            
+	        </FrameLayout>
+	        
+	    </LinearLayout>
+	    
+	</TabHost>
+            
 </LinearLayout>

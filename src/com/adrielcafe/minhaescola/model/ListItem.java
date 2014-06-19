@@ -1,9 +1,9 @@
-package com.adrielcafe.horarioescolar.list;
+package com.adrielcafe.minhaescola.model;
 
 import android.view.LayoutInflater;
 import android.view.View;
 
-public interface Item {
+public interface ListItem {
 	public int getViewType();
     public View getView(LayoutInflater inflater, View convertView);
 }
