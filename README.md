@@ -1,3 +1,3 @@
-Histórico Escolar
-=================
+Horário Escolar
+===============
 Aplicativo Android
