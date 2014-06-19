@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Horário Escolar</string>
+    <string name="refresh">Atualizar</string>
+    <string name="settings">Configurações</string>
+    <string name="settings_hint">URL do Aluno</string>
+    <string name="about">Sobre</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Salvar</string>
+    <string name="data_updated">Informações Atualizadas</string>
+    <string name="wrong_config">Configuração inválida.\nVocê deve informar o endereço web correto dos seus dados escolares.</string>
+
+</resources>
