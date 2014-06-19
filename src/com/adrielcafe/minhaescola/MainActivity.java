@@ -22,7 +22,6 @@ import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.adrielcafe.minhaescola.model.ListItem;
 import com.adrielcafe.minhaescola.model.ListItemHeader;
@@ -156,7 +155,6 @@ public class MainActivity extends Activity {
 							.putString(Util.PREF_USERDATA, json)
 							.commit();
 						updateList(userData);
-						Toast.makeText(MainActivity.this, R.string.data_updated, Toast.LENGTH_SHORT).show();
 					}
 				};
 			}.execute();
