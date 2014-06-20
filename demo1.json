@@ -1,0 +1,348 @@
+{
+    "nomeEscola": "EE Presidente Roosevelt",
+    "nomeEstudante": "Moacir Francisco de Melo",
+    "horarios": {
+        "Segunda-Feira": [
+            [
+                "Química",
+                " 08:00 às 09:00"
+            ],
+            [
+                "Geografia",
+                " 09:00 às 10:00"
+            ],
+            [
+                "História",
+                " 10:00 às 11:00"
+            ],
+            [
+                "Biologia",
+                " 11:00 às 12:00"
+            ]
+        ],
+        "Terça-Feira": [
+            [
+                "Redação",
+                " 08:00 às 09:00"
+            ],
+            [
+                "Matemática",
+                " 09:00 às 10:00"
+            ],
+            [
+                "Física",
+                " 10:00 às 11:00"
+            ],
+            [
+                "Geografia",
+                " 11:00 às 12:00"
+            ]
+        ],
+        "Quarta-Feira": [
+            [
+                "Sociologia",
+                " 08:00 às 09:00"
+            ],
+            [
+                "Gramática",
+                " 09:00 às 10:00"
+            ],
+            [
+                "Literatura",
+                " 10:00 às 11:00"
+            ],
+            [
+                "Português",
+                " 11:00 às 12:00"
+            ]
+        ],
+        "Quinta-Feira": [
+            [
+                "Biologia",
+                " 08:00 às 09:00"
+            ],
+            [
+                "Inglês",
+                " 09:00 às 10:00"
+            ],
+            [
+                "Espanhol",
+                " 10:00 às 11:00"
+            ],
+            [
+                "Sociologia",
+                " 11:00 às 12:00"
+            ]
+        ],
+        "Sexta-Feira": [
+            [
+                "Geografia",
+                " 08:00 às 09:00"
+            ],
+            [
+                "História",
+                " 09:00 às 10:00"
+            ],
+            [
+                "Português",
+                " 10:00 às 11:00"
+            ],
+            [
+                "Gramática",
+                " 11:00 às 12:00"
+            ]
+        ],
+        "Sábado": [
+            [
+                "Matemática",
+                " 08:00 às 09:00"
+            ],
+            [
+                "Física",
+                " 09:00 às 10:00"
+            ],
+            [
+                "Química",
+                " 10:00 às 11:00"
+            ],
+            [
+                "Inglês",
+                " 11:00 às 12:00"
+            ]
+        ]
+    },
+    "historico": {
+        "1º Semestre": [
+            [
+                "Química",
+                "7.7"
+            ],
+            [
+                "Geografia",
+                "6.4"
+            ],
+            [
+                "História",
+                "8.9"
+            ],
+            [
+                "Biologia",
+                "5.2"
+            ],
+            [
+                "Redação",
+                "6.3"
+            ],
+            [
+                "Matemática",
+                "9.3"
+            ],
+            [
+                "Física",
+                "9.0"
+            ],
+            [
+                "Geografia",
+                "8.6"
+            ],
+            [
+                "Sociologia",
+                "8.2"
+            ],
+            [
+                "Gramática",
+                "7.3"
+            ],
+            [
+                "Literatura",
+                "6.9"
+            ],
+            [
+                "Biologia",
+                "7.9"
+            ],
+            [
+                "Inglês",
+                "9.1"
+            ],
+            [
+                "Espanhol",
+                "8.4"
+            ]
+        ],
+        "2º Semestre": [
+            [
+                "Química",
+                "7.7"
+            ],
+            [
+                "Geografia",
+                "6.4"
+            ],
+            [
+                "História",
+                "8.9"
+            ],
+            [
+                "Biologia",
+                "5.2"
+            ],
+            [
+                "Redação",
+                "6.3"
+            ],
+            [
+                "Matemática",
+                "9.3"
+            ],
+            [
+                "Física",
+                "9.0"
+            ],
+            [
+                "Geografia",
+                "8.6"
+            ],
+            [
+                "Sociologia",
+                "8.2"
+            ],
+            [
+                "Gramática",
+                "7.3"
+            ],
+            [
+                "Literatura",
+                "6.9"
+            ],
+            [
+                "Biologia",
+                "7.9"
+            ],
+            [
+                "Inglês",
+                "10.0"
+            ],
+            [
+                "Espanhol",
+                "8.4"
+            ]
+        ],
+        "3º Semestre": [
+            [
+                "Química",
+                "7.7"
+            ],
+            [
+                "Geografia",
+                "6.4"
+            ],
+            [
+                "História",
+                "8.9"
+            ],
+            [
+                "Biologia",
+                "5.2"
+            ],
+            [
+                "Redação",
+                "6.3"
+            ],
+            [
+                "Matemática",
+                "9.3"
+            ],
+            [
+                "Física",
+                "9.0"
+            ],
+            [
+                "Geografia",
+                "8.6"
+            ],
+            [
+                "Sociologia",
+                "8.2"
+            ],
+            [
+                "Gramática",
+                "7.3"
+            ],
+            [
+                "Literatura",
+                "6.9"
+            ],
+            [
+                "Biologia",
+                "7.9"
+            ],
+            [
+                "Inglês",
+                "9.1"
+            ],
+            [
+                "Espanhol",
+                "8.4"
+            ]
+        ],
+        "4º Semestre": [
+            [
+                "Química",
+                "7.7"
+            ],
+            [
+                "Geografia",
+                "6.4"
+            ],
+            [
+                "História",
+                "8.9"
+            ],
+            [
+                "Biologia",
+                "5.2"
+            ],
+            [
+                "Redação",
+                "6.3"
+            ],
+            [
+                "Matemática",
+                "9.3"
+            ],
+            [
+                "Física",
+                "9.0"
+            ],
+            [
+                "Geografia",
+                "8.6"
+            ],
+            [
+                "Sociologia",
+                "8.2"
+            ],
+            [
+                "Gramática",
+                "7.3"
+            ],
+            [
+                "Literatura",
+                "6.9"
+            ],
+            [
+                "Biologia",
+                "7.9"
+            ],
+            [
+                "Inglês",
+                "9.1"
+            ],
+            [
+                "Espanhol",
+                "8.4"
+            ]
+        ]
+    }
+}
