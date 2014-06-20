@@ -17,7 +17,7 @@ Para testar o aplicativo, você pode usar algum desses links de demonstração:
 ## Formato dos Dados
 Para que o aplicativo **Minha Escola** consiga ler os dados escolares, eles precisam estar em um formato padronizado. Os dados precisam estar no formato JSON  e a codificação dos caracteres deve ser em UTF-8 . A estrutura do arquivo está descrita abaixo.
 
-*Estou à disposição para tirar dúvidas sobre este processo de integração.*
+*Estou à disposição para quaisquer esclarecimentos sobre este processo de integração.*
 
 ```javascript
 {
