@@ -11,8 +11,8 @@ Vamos supor que a *Escola XYZ* forneceu um link único para cada aluno, ele cont
 Feito isso, o aplicativo irá baixar os horários e histórico escolar do aluno e organiza-los de uma forma muito prática.
 Para testar o aplicativo, você pode usar algum desses links de demonstração:
 
-* [demo1.json](https://github.com/adrielcafe/MinhaEscola/blob/master/demo1.json)
-* [demo2.json](https://github.com/adrielcafe/MinhaEscola/blob/master/demo2.json)
+* [demo1.json](https://raw.githubusercontent.com/adrielcafe/MinhaEscola/master/demo1.json)
+* [demo2.json](https://raw.githubusercontent.com/adrielcafe/MinhaEscola/master/demo2.json)
 
 ## Formato dos Dados
 Para que o aplicativo **Minha Escola** consiga ler os dados escolares, eles precisam estar em um formato padronizado. Os dados precisam estar no formato JSON  e a codificação dos caracteres deve ser em UTF-8 . A estrutura do arquivo está descrita abaixo.
