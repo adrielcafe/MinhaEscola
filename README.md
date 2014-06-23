@@ -10,7 +10,7 @@ Vamos supor que a *Escola XYZ* forneceu um link único para cada aluno, ele cont
 
 Feito isso, o aplicativo irá baixar os horários e histórico escolar do aluno e organiza-los de uma forma muito prática.
 
-Para testar o aplicativo, está disponível um link de demonstração:
+Utilize o link abaixo para testar o aplicativo:
 
 * [demo.json](https://raw.githubusercontent.com/adrielcafe/MinhaEscola/master/assets/demo.json)
 
