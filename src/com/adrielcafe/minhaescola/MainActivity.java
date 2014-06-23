@@ -20,9 +20,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
-import android.widget.Toast;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.adrielcafe.minhaescola.model.ListItem;
 import com.adrielcafe.minhaescola.model.ListItemHeader;
