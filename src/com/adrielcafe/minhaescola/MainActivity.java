@@ -139,7 +139,6 @@ public class MainActivity extends Activity {
 					try {
 						return IOUtils.toString(new URL(url));
 					} catch(Exception e){ 
-						Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 						return null;
 					}
 				}
