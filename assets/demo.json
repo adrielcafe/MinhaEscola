@@ -1,8 +1,44 @@
 {
-    "nomeEscola": "EE Prof Fidelino Figueiredo",
-    "nomeEstudante": "Claudia Regina Martins",
+    "nomeEscola": "Escola (Desmonstração)",
+    "nomeEstudante": "Aluno (Demonstração)",
     "horarios": {
         "Segunda-Feira": [
+            [
+                "Química",
+                " 08:00 às 09:00"
+            ],
+            [
+                "Geografia",
+                " 09:00 às 10:00"
+            ],
+            [
+                "História",
+                " 10:00 às 11:00"
+            ],
+            [
+                "Biologia",
+                " 11:00 às 12:00"
+            ]
+        ],
+        "Terça-Feira": [
+            [
+                "Redação",
+                " 08:00 às 09:00"
+            ],
+            [
+                "Matemática",
+                " 09:00 às 10:00"
+            ],
+            [
+                "Física",
+                " 10:00 às 11:00"
+            ],
+            [
+                "Geografia",
+                " 11:00 às 12:00"
+            ]
+        ],
+        "Quarta-Feira": [
             [
                 "Sociologia",
                 " 08:00 às 09:00"
@@ -17,42 +53,6 @@
             ],
             [
                 "Português",
-                " 11:00 às 12:00"
-            ]
-        ],
-        "Terça-Feira": [
-            [
-                "Matemática",
-                " 08:00 às 09:00"
-            ],
-            [
-                "Física",
-                " 09:00 às 10:00"
-            ],
-            [
-                "Química",
-                " 10:00 às 11:00"
-            ],
-            [
-                "Inglês",
-                " 11:00 às 12:00"
-            ]
-        ],
-        "Quarta-Feira": [
-            [
-                "Geografia",
-                " 08:00 às 09:00"
-            ],
-            [
-                "História",
-                " 09:00 às 10:00"
-            ],
-            [
-                "Português",
-                " 10:00 às 11:00"
-            ],
-            [
-                "Gramática",
                 " 11:00 às 12:00"
             ]
         ],
@@ -76,37 +76,37 @@
         ],
         "Sexta-Feira": [
             [
-                "Química",
+                "Geografia",
                 " 08:00 às 09:00"
             ],
             [
-                "Geografia",
+                "História",
                 " 09:00 às 10:00"
             ],
             [
-                "História",
+                "Português",
                 " 10:00 às 11:00"
             ],
             [
-                "Biologia",
+                "Gramática",
                 " 11:00 às 12:00"
             ]
         ],
         "Sábado": [
             [
-                "Redação",
+                "Matemática",
                 " 08:00 às 09:00"
             ],
             [
-                "Matemática",
+                "Física",
                 " 09:00 às 10:00"
             ],
             [
-                "Física",
+                "Química",
                 " 10:00 às 11:00"
             ],
             [
-                "Geografia",
+                "Inglês",
                 " 11:00 às 12:00"
             ]
         ]
@@ -221,7 +221,7 @@
             ],
             [
                 "Inglês",
-                "9.1"
+                "10.0"
             ],
             [
                 "Espanhol",

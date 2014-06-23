@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
+import android.widget.Toast;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
@@ -61,7 +62,7 @@ public class MainActivity extends Activity {
 		transcript = (PinnedSectionListView) findViewById(R.id.transcript);
 		
 		String url = getPreferences(Context.MODE_PRIVATE).getString(Util.PREF_URL, null);
-		updateUserData(url);
+		updateUserData(url == null || url.isEmpty() ? getString(R.string.url_demo) : url);
 	}
 
 	@Override
@@ -89,7 +90,7 @@ public class MainActivity extends Activity {
 
 	private void actionRefresh(){
 		String url = getPreferences(Context.MODE_PRIVATE).getString(Util.PREF_URL, null);
-		updateUserData(url); 
+		updateUserData(url == null || url.isEmpty() ? getString(R.string.url_demo) : url); 
 	}
 
 	private void actionSettings(){
@@ -138,6 +139,7 @@ public class MainActivity extends Activity {
 					try {
 						return IOUtils.toString(new URL(url));
 					} catch(Exception e){ 
+						Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 						return null;
 					}
 				}

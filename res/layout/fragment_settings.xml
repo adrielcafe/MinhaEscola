@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:hint="http://"
-        android:text="http://adrielcafe.com/tmp/demo1"
+        android:text="@string/url_demo"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:ems="10" />
     
