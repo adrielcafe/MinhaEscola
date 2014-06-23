@@ -9,10 +9,10 @@ As escolas possuem todos os dados dos alunos em seus sistemas de gestão. Se ela
 Vamos supor que a *Escola XYZ* forneceu um link único para cada aluno, ele contém os horários e histórico escolar de cada um. Os alunos devem baixar o aplicativo **Minha Escola** no Google Play e informar esse link na tela de configuração. 
 
 Feito isso, o aplicativo irá baixar os horários e histórico escolar do aluno e organiza-los de uma forma muito prática.
-Para testar o aplicativo, você pode usar algum desses links de demonstração:
 
-* [demo1.json](https://raw.githubusercontent.com/adrielcafe/MinhaEscola/master/demo1.json)
-* [demo2.json](https://raw.githubusercontent.com/adrielcafe/MinhaEscola/master/demo2.json)
+Para testar o aplicativo, está disponível um link de demonstração:
+
+* [demo.json](https://raw.githubusercontent.com/adrielcafe/MinhaEscola/master/assets/demo.json)
 
 ## Formato dos Dados
 Para que o aplicativo **Minha Escola** consiga ler os dados escolares, eles precisam estar em um formato padronizado. Os dados precisam estar no formato JSON  e a codificação dos caracteres deve ser em UTF-8 . A estrutura do arquivo está descrita abaixo.
